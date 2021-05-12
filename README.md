@@ -1,5 +1,5 @@
 # dotfiles(各種設定ファイルの同期)
-上記ファイルを同期
+上記ファイルを同期するためのリポジトリ
 ## setup
 ```
  git clone git@github.com:Snails8/dotfiles.git
