@@ -28,6 +28,8 @@ alias ll='ls -l'
 alias lf='ls -F'
 alias del='rm -rf'
 alias sed=gsed
+alias de=develop
+alias orde='origin develop'
 
 # その他
 alias tarc='tar -zcvf'
