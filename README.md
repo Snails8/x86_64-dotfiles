@@ -3,7 +3,7 @@
 ## setup
 ```
  git clone git@github.com:Snails8/dotfiles.git ~/.dotfiles --recursive
- source dotfiles/install.sh
+ source dotfiles/setup.sh
  ```
  ## 上記コマンドの仕組み
 
