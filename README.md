@@ -2,8 +2,8 @@
 上記ファイルを同期するためのリポジトリ
 ## setup
 ```
- git clone git@github.com:Snails8/dotfiles.git
- source dotfiles/install.sh
+ git clone git@github.com:Snails8/dotfiles.git ~/.dotfiles --recursive
+ source dotfiles/setup.sh
  ```
  ## 上記コマンドの仕組み
 
