@@ -35,6 +35,9 @@ alias orde='origin develop'
 alias tarc='tar -zcvf'
 alias tarx='tar -zxvf'
 
+# z コマンド
+. ~/z/z.sh
+
 # 一般設定
 setopt no_beep           # ビープ音を鳴らさないようにする
 setopt auto_cd           # ディレクトリ名の入力のみで移動する

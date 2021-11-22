@@ -1,0 +1,30 @@
+on:
+  push:
+    branches:
+      - master
+name: create-release
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: GoogleCloudPlatform/release-please-action@v2
+        id: release
+        with:
+          release-type: node
+          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
+      - name: Setup Node.js
+        if: ${{ steps.release.outputs.release_created }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+      - name: Checkout code
+        if: ${{ steps.release.outputs.release_created }}
+        uses: actions/checkout@v2
+      - run: npm install
+        if: ${{ steps.release.outputs.release_created }}
+      - run: npm install -g vsce
+        if: ${{ steps.release.outputs.release_created }}
+      - run: vsce publish -p $VSCE_TOKEN
+        if: ${{ steps.release.outputs.release_created }}
+        env:
+          VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
