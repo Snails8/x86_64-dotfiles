@@ -31,6 +31,9 @@ alias sed=gsed
 alias de=develop
 alias orde='origin develop'
 
+# atcoder 
+alias otphp='oj t -c "php main.php" -d ./tests/ -N'
+
 # その他
 alias tarc='tar -zcvf'
 alias tarx='tar -zxvf'
