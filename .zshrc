@@ -31,7 +31,6 @@ alias sed=gsed
 alias de=develop
 alias orde='origin develop'
 alias m='make'
-alias d='develop'
 
 # atcoder 
 alias otphp='oj t -c "php main.php" -d ./tests/ -N'
