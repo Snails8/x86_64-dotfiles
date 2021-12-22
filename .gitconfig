@@ -12,6 +12,8 @@
   bra    = branch -a
   ps     = push
   pso    = push origin
+  psod   = push origin develop
+  psom   = push origin main
   psb    = push backlog
   p      = pull
   po     = pull origin
@@ -36,8 +38,7 @@
   tr     = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
   refile = checkout HEAD --
   brupdate = fetch --prune
-  dev = develop
-  m = main  
+  m = merge
 [color]
   ui          = true
   diff        = auto
