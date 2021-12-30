@@ -17,6 +17,8 @@
   psb    = push backlog
   p      = pull
   po     = pull origin
+  pod    = pull origin develop
+  pom    = pull origin main
   pb     = pull backlog
   pp     = pull --prune
   re     = reset
