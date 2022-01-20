@@ -1,4 +1,3 @@
-~/.config/fish/config.fish
 
 starship init fish | source
 
@@ -132,10 +131,10 @@ function __check_rvm --on-variable PWD --description 'Do nvm stuff'
 end
 #switch (uname)
 
-set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
-if test -f $LOCAL_CONFIG
-  source $LOCAL_CONFIG
-end
+# set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
+# if test -f $LOCAL_CONFIG
+#   source $LOCAL_CONFIG
+# end
 
-starship init fish | source
+# starship init fish | source
 
