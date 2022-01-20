@@ -7,3 +7,5 @@ brew:
 brew-install:
 	brew bundle -v --file=~/Brewfile
 
+install:
+	sh install.sh

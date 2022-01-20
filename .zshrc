@@ -32,9 +32,12 @@ alias de=develop
 alias orde='origin develop'
 alias m='make'
 alias awsp='source ~/awsp/run.sh'
+alias tmux='tmux -f ~/.config/tmux/.tmux.conf'
 
 # atcoder 
 alias otphp='oj t -c "php main.php" -d ./tests/ -N'
+
+# tmux
 
 # その他
 alias tarc='tar -zcvf'
