@@ -50,7 +50,8 @@ fi
 # ======================================================
 stow -v -d ~/dotfiles/packages/terminal -t ~ alacritty starship tmux zshrc  gitconfig
 stow -v -d ~/dotfiles/packages/editor -t ~ vimrc vscode
-stow -v -d ~/dotfiles/packages/window_tool -t ~ skhd yabai
+stow -v -d ~/dotfiles/packages/window_tool -t ~ yabai
+stow -v -d ~/dotfiles/packages/keybind -t ~ skhd karabiner
 
 cat << END
 **************************************************
