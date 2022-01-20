@@ -31,7 +31,7 @@ brew bundle -v --file=~/Brewfile
 # ex) ~/dotfiles/packages/termial/fish/.config/fish/*  -> root + .config/fish/*
 # root/.config/fish 配下にシンボリックリンクが作成される (衝突しない)
 
-stow -v -d ~/.myconfig/packages/terminal -t ~ alacritty starship tmux
+stow -v -d ~/.myconfig/packages/terminal -t ~ alacritty starship tmux zshrc skhdrc gitconfig vimrc
 #stow -v -d ~/dotfiles/packages/virual_environment/ -t ~ docker
 #stow -v -d ~/dotfiles/packages/versioning -t ~ git-templates
 #stow -v -d ~/dotfiles/packages/editor -t ~ coc nvim
