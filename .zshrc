@@ -31,6 +31,7 @@ alias sed=gsed
 alias de=develop
 alias orde='origin develop'
 alias m='make'
+alias awsp='source ~/awsp/run.sh'
 
 # atcoder 
 alias otphp='oj t -c "php main.php" -d ./tests/ -N'
