@@ -31,9 +31,9 @@ brew bundle -v --file=~/Brewfile
 # ex) ~/dotfiles/packages/termial/fish/.config/fish/*  -> root + .config/fish/*
 # root/.config/fish 配下にシンボリックリンクが作成される (衝突しない)
 
-stow -v -d ~/.myconfig/packages/terminal -t ~ alacritty starship tmux zshrc skhdrc gitconfig
+stow -v -d ~/.myconfig/packages/terminal -t ~ alacritty starship tmux zshrc  gitconfig
 stow -v -d ~/.myconfig/packages/editor -t ~ vimrc vscode
-#stow -v -d ~/dotfiles/packages/versioning -t ~ git-templates
+stow -v -d ~/.myconfig/packages/versioning -t ~ skhd yabai
 #stow -v -d ~/dotfiles/packages/wm -t ~ limelight yabai
 #stow -v -d ~/dotfiles/packages/keybindings -t ~ karabiner
 #ln -sf "~/.config/yabai/yabairc" "~/.yabairc"
