@@ -110,4 +110,6 @@ source $ZSH/oh-my-zsh.sh
 # 環境依存系の読み込み
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
+# 文字列を標準入力としてシェルに与えて実行（した上でその返り値を取得）できる
 eval $(thefuck --alias)
+eval "$(starship init zsh)"
