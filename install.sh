@@ -1,54 +1,40 @@
-set -u
+#!/bin/bash
+set -eu
 
-# 実行場所のディレクトリを取得
-THIS_DIR=$(cd $(dirname $0); pwd)
-
-cd $THIS_DIR
-git submodule init
-git submodule update
-
-# dotfilesにあるドットファイルをfor文で回し、ホームディレクトリにシンボリックリンクを貼る
-# 正規表現で「.??*」としておけば、先頭がドットで始まり、2文字以上のファイルを探索できる
-# 探索したファイルを「continue」で個別にスキップできる 
-echo "start setup..."
-
-# ディレクトリ
-for f in .??*/; do
-    [ "$f" = ".git" ] && continue
-    [ "$f" = ".gitconfig.local.template" ] && continue
-    [ "$f" = ".require_oh-my-zsh" ] && continue
-    [ "$f" = ".gitmodules" ] && continue
-    [ "$f" = ".config" ] && continue
-    ln -snfv ~/.dotfiles/"$f" ~/
-done
-
-#　ファイル
-for f in .??*; do
-    [ "$f" = ".git" ] && continue
-    [ "$f" = ".gitconfig.local.template" ] && continue
-    [ "$f" = ".require_oh-my-zsh" ] && continue
-    [ "$f" = ".gitmodules" ] && continue
-    [ "$f" = ".config" ] && continue
-    [ "$f" = ".aws" ] && continue
-    [ "$f" = ".ssh" ] && continue
-
-    ln -snfv ~/.dotfiles/"$f" ~/
-done
-
-[ -e ~/.gitconfig.local ] || cp ~/dotfiles/.gitconfig.local.template ~/.gitconfig.local
-
-# emacs set up
-if which cask >/dev/null 2>&1; then
-  echo "setup .emacs.d..."
-  cd ${THIS_DIR}/.emacs.d
-  cask upgrade
-  cask install
+# homebrew がインストールされていない場合インストール(どこで実行してもok )
+if [ ! -f /usr/local/bin/brew ]; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+  echo "Homebrew has installed."
 fi
 
-cat << END
+#dotfile ないときはgit clone
+if [ ! -d ~/dotfiles ]; then
+  cd ~
+  git clone git@github.com:comu2e/dotfiles.git
+else
+  echo "dotfile is already exist."
+fi
 
+# install software from BrewBundle.
+brew bundle -v --file=~/dotfiles/Brewfile
+
+# if .config has not made ,error will occur.
+if [ ! -d ~/.config ]; then
+  mkdir ~/.config
+fi
+
+# symlink each config file.
+stow -v -d ~/dotfiles/packages/termial/ -t ~ alacritty fish omf starship tmux
+stow -v -d ~/dotfiles/packages/virual_environment/ -t ~ docker
+stow -v -d ~/dotfiles/packages/versioning -t ~ git-templates
+stow -v -d ~/dotfiles/packages/editor -t ~ coc nvim
+stow -v -d ~/dotfiles/packages/wm -t ~ limelight yabai
+stow -v -d ~/dotfiles/packages/keybindings -t ~ karabiner
+ln -sf "~/.config/yabai/yabairc" "~/.yabairc"
+ln -sf "~/.config/yabai/skhdrc" "~/.skhdrc"
+cat << END
 **************************************************
 DOTFILES SETUP FINISHED! bye.
 **************************************************
-
 END
