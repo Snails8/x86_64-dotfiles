@@ -46,7 +46,7 @@ fi
 
 # ex) stow -v -d ~/dotfiles/packages/termial/ -t ~ fish
 # ex) ~/dotfiles/packages/termial/fish/.config/fish/*  -> root + .config/fish/*
-# root/.config/fish 配下にシンボリックリンクが作成される (衝突しない)
+# root/.config/fish 配下にシンボリックリンクが作成される (衝突しないし、上書きもできる)
 # ======================================================
 stow -v -d ~/dotfiles/packages/terminal -t ~ alacritty starship tmux iterm2 zshrc  gitconfig
 stow -v -d ~/dotfiles/packages/editor -t ~ vimrc vscode
