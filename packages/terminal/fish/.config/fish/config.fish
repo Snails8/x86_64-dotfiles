@@ -35,7 +35,6 @@ function awsp
     set -xU AWS_PROFILE $selected_profile
 end
 
-alias vim="nvim"
 alias ga="git add"
 alias gbd="git branch -d"
 alias gb='git branch'
@@ -54,23 +53,10 @@ alias gstl="git stash list"
 alias gstp="git stash pop"
 alias gstd="git stash drop"
 
-
-#exa
-alias ls="exa"
-alias la="exa -l -g --icons"
-alias ll='exa -ahl --git'
-
 #Atcoder
 abbr -a acn acc new abc
 abbr -a acu acc url
 abbr -a .. cd ../..
-
-#lazydocker
-abbr -a ld lazydocker
-#lazygit
-abbr -a lg lazygit
-#kubernetes
-abbr -a k kubectl
 
 #tmux
 alias ide="~/.config/tmux/bin/ide.sh"
@@ -78,6 +64,7 @@ alias tmux="tmux -f ~/.config/tmux/.tmux.conf"
 abbr -a tas tmux attach-session -t
 abbr -a tm tmux
 abbr -a tls tmux list-session
+
 #Rust
 abbr -a cr cargo run
 abbr -a cb cargo build
@@ -85,21 +72,22 @@ abbr -a ccn cargo compete new abc
 abbr -a cco cargo compete open
 abbr -a cct cargo compete test
 abbr -a ccs cargo compete submit
+
 #Zellij
 abbr -a zj zellij
 abbr -a zls zellij list-sessions
 abbr -a za zellij attach
 #check global ip
 abbr -a ip curl ipinfo.io
+
 #setting
-alias vcon="vim ~/.config/nvim/init.vim"
 alias zcon="vim ~/.config/zellij/config.yaml"
 alias fcon="vim ~/.config/fish/config.fish"
 alias tcon="vim ~/.tmux.conf"
 alias alcon="vim ~/.config/alacritty/alacritty.yml"
 alias m="make"
 alias tk="tmux kill-server"
-alias vpcon="vim ~/.config/nvim/plug.vim"
+
 #aws
 abbr -a awsssm aws ecs update-service \
     --cluster example-cluster \
@@ -115,20 +103,7 @@ set fish_greeting
 # Path to z 
 set -g Z_SCRIPT_PATH /usr/local/etc/profile.d/z.sh
 abbr -a j z
-#exa command
-function ls
-  command exa -lh --time-style=long-iso --icons --sort=Name $argv
-end
 
-## NVM
-function __check_rvm --on-variable PWD --description 'Do nvm stuff'
-  status --is-command-substitution; and return
-
-  if test -f .nvmrc; and test -r .nvmrc;
-    nvm use
-  else
-  end
-end
 #switch (uname)
 
 # set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
