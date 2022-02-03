@@ -4,18 +4,16 @@ starship init fish | source
 export LSCOLORS=Gxfxcxdxbxegedabagacad
 
 # alias
+alias m="make"
 
 #atcoder
 abbr -a ojt oj t -c \"python3 main.py\"
 abbr -a acs acc submit main.py -- --guess-python-interpreter pypy
-#git
 
-# git
+# Git
 abbr -a g git
-abbr -a st status
-abbr -a
 
-#docker
+# docker
 abbr -a d docker
 abbr -a dc docker-compose 
 abbr -a dcu docker-compose up 
@@ -24,18 +22,12 @@ abbr -a dce docker-compose exec
 abbr -a dcep docker-compose exec app php artisan 
 abbr -a dcbash docker-compose exec app /bin/bash 
 
-#phptest
+# phptest
 abbr -a dtest docker-compose exec app vendor/bin/phpunit
 abbr -a phptest vendor/bin/phpunit
 abbr -a pa php artisan make
 
-#terraform
-abbr -a ta terraform apply
-abbr -a tp terraform plan
-abbr -a ti terraform init
-abbr -a td terraform destroy
-
-#Git
+#Gi
 #AWSP
 function awsp
     AWS_PROFILE="$AWS_PROFILE" _awsp_prompt
@@ -78,14 +70,15 @@ alias alcon="vim ~/.config/alacritty/alacritty.yml"
 alias m="make"
 alias tk="tmux kill-server"
 
-#aws
+# aws
 abbr -a awsssm aws ecs update-service \
     --cluster example-cluster \
     --service example-service \
     --enable-execute-command
-#peco
+
+# peco
 function fish_user_key_bindings
-  bind \cr 'peco_select_history (commandline -b)'
+  bind \ct 'peco_select_history (commandline -b)'
 end
 
 #fish message
