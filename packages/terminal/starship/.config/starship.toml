@@ -28,7 +28,7 @@ show_always = true
 [character]
 success_symbol = "[🐟 \\$](white)" # normal prompt
 error_symbol = "[🐱💢💢💢](bold red)" # used if previous command failed
-a
+
 [directory]
 format = " [$path]($style)"
 style = "fg:cyan"
