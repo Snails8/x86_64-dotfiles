@@ -10,23 +10,31 @@ abbr -a ojt oj t -c \"python3 main.py\"
 abbr -a acs acc submit main.py -- --guess-python-interpreter pypy
 #git
 
+# git
+abbr -a g git
+abbr -a st status
+abbr -a
+
 #docker
-abbr -a d docker 
+abbr -a d docker
 abbr -a dc docker-compose 
 abbr -a dcu docker-compose up 
 abbr -a dcd docker-compose down
 abbr -a dce docker-compose exec
 abbr -a dcep docker-compose exec app php artisan 
 abbr -a dcbash docker-compose exec app /bin/bash 
+
 #phptest
 abbr -a dtest docker-compose exec app vendor/bin/phpunit
 abbr -a phptest vendor/bin/phpunit
 abbr -a pa php artisan make
+
 #terraform
 abbr -a ta terraform apply
 abbr -a tp terraform plan
 abbr -a ti terraform init
 abbr -a td terraform destroy
+
 #Git
 #AWSP
 function awsp
@@ -34,24 +42,6 @@ function awsp
     set selected_profile (cat ~/.awsp)
     set -xU AWS_PROFILE $selected_profile
 end
-
-alias ga="git add"
-alias gbd="git branch -d"
-alias gb='git branch'
-alias gcm='git commit -m'
-alias gca="git commit --amend"
-alias g="git checkout"
-alias gcb="git checkout -b"
-alias gl="git log --date=iso --decorate"
-alias glp="git log --date=iso --decorate --patch"
-alias glg="git log --date=iso --graph --decorate --oneline --all"
-alias gs="git status"
-alias gf="git fetch"
-alias gp="git pull"
-alias gst="git stash"
-alias gstl="git stash list"
-alias gstp="git stash pop"
-alias gstd="git stash drop"
 
 #Atcoder
 abbr -a acn acc new abc
