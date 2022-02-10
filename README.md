@@ -16,3 +16,8 @@ $ brew start services skhd
 $ brew start services yabai
 ```
 
+Brew の同期
+```shell
+# 存在していると作成できないので一旦削除したあと実行
+$ brew bundle dump
+```
