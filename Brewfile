@@ -40,6 +40,7 @@ brew "z"
 
 cask "alacritty"
 cask "alfred"
+cask "dash"
 cask "discord"
 cask "docker"
 cask "firefox"
