@@ -31,18 +31,9 @@ if [ ! -d ~/works/private ]; then
   mkdir ~/works/private
 fi
 
-# ======================================================
-# symlink each config file.
-
-# ex) stow -v -d ~/dotfiles/packages/termial/ -t ~ fish
-# ex) ~/dotfiles/packages/termial/fish/.config/fish/*  -> root + .config/fish/*
-# root/.config/fish 配下にシンボリックリンクが作成される (衝突しないし、上書きもできる)
-# karabiner の設定
-# ======================================================
-stow -v -d ~/dotfiles/packages/terminal -t ~ alacritty starship tmux iterm2 zshrc fish oh_my_fish thefuck gitconfig
-stow -v -d ~/dotfiles/packages/editor -t ~ vimrc vscode
-stow -v -d ~/dotfiles/packages/window_tool -t ~ yabai
-stow -v -d ~/dotfiles/packages/keybind -t ~ skhd karabiner
+if [ ! -f ~/.gitconfig.local ]; then
+  touch ~/.gitconfig.local
+fi
 
 # ======================================================
 # install software from BrewBundle.
@@ -67,14 +58,24 @@ if [ ! -d ~/.local/share/omf/ ]; then
 fi
 
 # ======================================================
-# source
+# symlink each config file.
+
+# ex) stow -v -d ~/dotfiles/packages/termial/ -t ~ fish
+# ex) ~/dotfiles/packages/termial/fish/.config/fish/*  -> root + .config/fish/*
+# root/.config/fish 配下にシンボリックリンクが作成される (衝突しないし、上書きもできる)
+# karabiner の設定
+# ======================================================
+stow -v -d ~/dotfiles/packages/terminal -t ~ alacritty starship tmux iterm2 zshrc fish oh_my_fish thefuck gitconfig
+stow -v -d ~/dotfiles/packages/editor -t ~ vimrc vscode
+stow -v -d ~/dotfiles/packages/window_tool -t ~ yabai
+stow -v -d ~/dotfiles/packages/keybind -t ~ skhd karabiner
+
+# ======================================================
+# source は挙動が不安定なので一旦手動で
 # ======================================================
 #source ~/.config/starship.toml # config/.fish に記載してあるので不要
-fish
-source ~/.config/fish/config.fish
-zsh
-source ~/.zshrc
-
+#source ~/.config/fish/config.fish
+#source ~/.zshrc
 
 cat << END
 **************************************************
