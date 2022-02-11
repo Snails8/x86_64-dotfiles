@@ -46,8 +46,8 @@ alias otphp='oj t -c "php main.php" -d ./tests/ -N'
 alias tarc='tar -zcvf'
 alias tarx='tar -zxvf'
 
-# z コマンド
-. ~/z/z.sh
+# z コマンド 一旦コメントアウト
+# . ~/z/z.sh
 
 # 一般設定
 setopt no_beep           # ビープ音を鳴らさないようにする
