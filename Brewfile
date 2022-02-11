@@ -63,3 +63,4 @@ cask "virtualbox"
 cask "visual-studio-code"
 cask "zoom"
 
+mas "Xcode", id: 497799835
