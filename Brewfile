@@ -65,6 +65,7 @@ cask "google-chrome"
 cask "google-cloud-sdk"
 cask "google-japanese-ime"
 cask "gyazo"
+cask "jetbrains-toolbox"
 cask "kindle"
 cask "keyweb"
 cask "intellij-idea"
@@ -86,3 +87,7 @@ cask "zoom"
 
 # 初回のみ
 # mas "Xcode", id: 497799835
+# mas "Display Menu", id: 549083868
+# mas “Notion Web Clipper”, id: 1559269364
+# mas “Authenticator”, id: 1538761576  有料
+#
