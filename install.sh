@@ -73,7 +73,7 @@ fi
 fish
 source ~/.config/fish/config.fish
 zsh
-source ~/.config/zsh/.zshrc
+source ~/.zshrc
 
 
 cat << END
