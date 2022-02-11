@@ -69,7 +69,7 @@ fi
 # ======================================================
 # source
 # ======================================================
-source ~/.config/starship.toml
+#source ~/.config/starship.toml # config/.fish に記載してあるので不要
 fish
 source ~/.config/fish/config.fish
 zsh
