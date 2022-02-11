@@ -39,7 +39,7 @@ fi
 # root/.config/fish 配下にシンボリックリンクが作成される (衝突しないし、上書きもできる)
 # karabiner の設定
 # ======================================================
-stow -v -d ~/dotfiles/packages/terminal -t ~ alacritty starship tmux iterm2 zshrc fish oh_my_fish thefuck gitconfig
+stow -v -d -R ~/dotfiles/packages/terminal -t ~ alacritty starship tmux iterm2 zshrc fish oh_my_fish thefuck gitconfig
 stow -v -d ~/dotfiles/packages/editor -t ~ vimrc vscode
 stow -v -d ~/dotfiles/packages/window_tool -t ~ yabai
 stow -v -d ~/dotfiles/packages/keybind -t ~ skhd karabiner
