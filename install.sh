@@ -32,6 +32,19 @@ if [ ! -d ~/works/private ]; then
 fi
 
 # ======================================================
+# symlink each config file.
+
+# ex) stow -v -d ~/dotfiles/packages/termial/ -t ~ fish
+# ex) ~/dotfiles/packages/termial/fish/.config/fish/*  -> root + .config/fish/*
+# root/.config/fish 配下にシンボリックリンクが作成される (衝突しないし、上書きもできる)
+# karabiner の設定
+# ======================================================
+stow -v -d ~/dotfiles/packages/terminal -t ~ alacritty starship tmux iterm2 zshrc fish oh_my_fish thefuck gitconfig
+stow -v -d ~/dotfiles/packages/editor -t ~ vimrc vscode
+stow -v -d ~/dotfiles/packages/window_tool -t ~ yabai
+stow -v -d ~/dotfiles/packages/keybind -t ~ skhd karabiner
+
+# ======================================================
 # install software from BrewBundle.
 # ======================================================
 brew bundle -v --file=~/dotfiles/Brewfile
@@ -41,17 +54,6 @@ if [ ! -d ~/.config ]; then
   mkdir ~/.config
 fi
 
-# ======================================================
-# symlink each config file.
-
-# ex) stow -v -d ~/dotfiles/packages/termial/ -t ~ fish
-# ex) ~/dotfiles/packages/termial/fish/.config/fish/*  -> root + .config/fish/*
-# root/.config/fish 配下にシンボリックリンクが作成される (衝突しないし、上書きもできる)
-# ======================================================
-stow -v -d ~/dotfiles/packages/terminal -t ~ alacritty starship tmux iterm2 zshrc fish oh_my_fish thefuck gitconfig
-stow -v -d ~/dotfiles/packages/editor -t ~ vimrc vscode
-stow -v -d ~/dotfiles/packages/window_tool -t ~ yabai
-stow -v -d ~/dotfiles/packages/keybind -t ~ skhd karabiner
 
 cat << END
 **************************************************
