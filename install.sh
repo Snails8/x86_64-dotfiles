@@ -69,11 +69,11 @@ fi
 # ======================================================
 # source
 # ======================================================
-#source ~/.config/starship.toml
-#fish
-#source ~/.config/fish/config.fish
-#zsh
-#source ~/.config/zsh/.zshrc
+source ~/.config/starship.toml
+fish
+source ~/.config/fish/config.fish
+zsh
+source ~/.config/zsh/.zshrc
 
 
 cat << END
