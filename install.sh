@@ -66,16 +66,6 @@ if [ ! -d ~/.local/share/omf/ ]; then
   curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 fi
 
-# ======================================================
-# source
-# ======================================================
-#source ~/.config/starship.toml # config/.fish に記載してあるので不要
-fish
-source ~/.config/fish/config.fish
-zsh
-source ~/.zshrc
-
-
 cat << END
 **************************************************
 DOTFILES SETUP FINISHED! Good Hack!
