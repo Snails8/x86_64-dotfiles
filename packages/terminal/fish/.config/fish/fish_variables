@@ -59,6 +59,7 @@ SETUVAR _fish_abbr_td:terraform\x20destroy
 SETUVAR _fish_abbr_ti:terraform\x20init
 SETUVAR _fish_abbr_tls:tmux\x20list\x2dsession
 SETUVAR _fish_abbr_tm:tmux
+SETUVAR _fish_abbr_to:touch
 SETUVAR _fish_abbr_tp:terraform\x20plan
 SETUVAR _fish_abbr_za:zellij\x20attach
 SETUVAR _fish_abbr_zellij:zj

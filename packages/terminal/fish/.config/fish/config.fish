@@ -5,6 +5,10 @@ export LSCOLORS=Gxfxcxdxbxegedabagacad
 
 # alias
 alias m="make"
+alias md="mkdir"
+
+# command
+abbr -a to touch
 
 #atcoder
 abbr -a ojt oj t -c \"python3 main.py\"
