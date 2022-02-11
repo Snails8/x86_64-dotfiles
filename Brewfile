@@ -41,6 +41,7 @@ brew "z"
 cask "alacritty"
 cask "alfred"
 cask "dash"
+cask "deepl"
 cask "discord"
 cask "docker"
 cask "firefox"
@@ -56,6 +57,7 @@ cask "intellij-idea"
 cask "iterm2"
 cask "karabiner-elements"
 cask "notion"
+cask "sequel-pro"
 cask "skitch"
 cask "slack"
 cask "sublime-text"
@@ -67,4 +69,5 @@ cask "virtualbox"
 cask "visual-studio-code"
 cask "zoom"
 
-mas "Xcode", id: 497799835
+# 初回のみ
+# mas "Xcode", id: 497799835
