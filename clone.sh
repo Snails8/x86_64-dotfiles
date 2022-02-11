@@ -18,6 +18,7 @@ fi
 if [ ! -d ~/works/private ]; then
   mkdir ~/works/private
 
+  # private  ディレクトリ内にリポジトリ名でclone される
   cd ~/works/private
   gh repo list Snails8d | awk '{print $1}' |xargs -I {} git clone http://github.com/{}
   # gh repo list Snails8d | awk '{print $1}' |xargs -I {} cat {}
