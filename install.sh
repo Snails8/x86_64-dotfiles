@@ -54,6 +54,27 @@ if [ ! -d ~/.config ]; then
   mkdir ~/.config
 fi
 
+# ======================================================
+# install software from oh-my-zsh & oh-my-fish.
+# ======================================================
+if [ ! -d ~/.oh-my-zsh ]; then
+  curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+fi
+
+# oh-my-fish   https://github.com/oh-my-fish/oh-my-fish
+if [ ! -d ~/.local/share/omf/ ]; then
+  curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+fi
+
+# ======================================================
+# source
+# ======================================================
+#source ~/.config/starship.toml
+#fish
+#source ~/.config/fish/config.fish
+#zsh
+#source ~/.config/zsh/.zshrc
+
 
 cat << END
 **************************************************
