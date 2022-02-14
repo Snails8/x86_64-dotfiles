@@ -77,6 +77,12 @@ stow -v -d ~/dotfiles/packages/keybind -t ~ skhd karabiner
 #source ~/.config/fish/config.fish
 #source ~/.zshrc
 
+# =====================================================
+# yabai & skhd
+# =====================================================
+brew services start yabai
+brew services start skhd
+
 cat << END
 **************************************************
 DOTFILES SETUP FINISHED! Good Hack!
