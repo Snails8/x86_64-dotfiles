@@ -9,6 +9,7 @@ tap "koekeishiya/formulae"
 cask_args appdir: "/Applications"
 
 brew "asdf"
+brew "php"
 brew "python@3.9", link: false
 brew "go"
 brew "awscli"
