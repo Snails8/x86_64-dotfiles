@@ -46,13 +46,14 @@ if [ ! -d ~/.config ]; then
 fi
 
 # ======================================================
-# nodebrew がインストールされていない場合インストール(どこで実行してもok )
+# nodebrew がインストールされていない場合インストール (alfred で使用)
 # ======================================================
 if [ ! -f /usr/local/bin/nodebrew ]; theni
   nodebrew setup
   nodebrew install-binary stablei
   nodebrew use v16.14.0
-  echo 'export PATH=$HOME/.nodebrew/current/bin:$PATH' >> ~/.zprofile
+  echo 'export PATH=$HOME/.nodebrew/current/bin:$PATH' >> ~/.zprofilei
+  source ~/.zprofile
 else
   echo "nodejs has already installed."
 fi
