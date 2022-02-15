@@ -46,6 +46,18 @@ if [ ! -d ~/.config ]; then
 fi
 
 # ======================================================
+# nodebrew がインストールされていない場合インストール(どこで実行してもok )
+# ======================================================
+if [ ! -f /usr/local/bin/nodebrew ]; theni
+  nodebrew setup
+  nodebrew install-binary stablei
+  nodebrew use v16.14.0
+  echo 'export PATH=$HOME/.nodebrew/current/bin:$PATH' >> ~/.zprofile
+else
+  echo "nodejs has already installed."
+fi
+
+# ======================================================
 # install software from oh-my-zsh & oh-my-fish.
 # ======================================================
 if [ ! -d ~/.oh-my-zsh ]; then
