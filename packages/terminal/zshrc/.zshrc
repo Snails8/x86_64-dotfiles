@@ -10,6 +10,9 @@ colors
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
+# 起動時にnode 読み込みを実行
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 # エイリアス設定
 alias v=vim
 alias g=git

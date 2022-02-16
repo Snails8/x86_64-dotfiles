@@ -3,6 +3,9 @@ starship init fish | source
 
 export LSCOLORS=Gxfxcxdxbxegedabagacad
 
+# node
+set -x PATH $HOME/.nodebrew/current/bin $PATH
+
 # alias
 alias m="make"
 alias md="mkdir"
