@@ -19,6 +19,7 @@ abbr -a acs acc submit main.py -- --guess-python-interpreter pypy
 
 # Git
 abbr -a g git
+abbr -a gca git commit --amend
 
 # docker
 abbr -a d docker

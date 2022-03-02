@@ -1,7 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export AWS_CLI_ACCOUNT_ID:\x3d\x1e\x7b\x7d
-SETUVAR --export AWS_PROFILE:housebokan_prod_admin_user
+SETUVAR --export AWS_PROFILE:\x1d
 SETUVAR --export PYENV_ROOT:/Users/takahashi\x2eeiji/\x2epyenv
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr__2E_2E_:cd\x20\x2e\x2e/\x2e\x2e
@@ -30,7 +30,7 @@ SETUVAR _fish_abbr_dtest:docker\x2dcompose\x20exec\x20app\x20vendor/bin/phpunit
 SETUVAR _fish_abbr_g:git
 SETUVAR _fish_abbr_g_2E_:git\x20add\x20\x2e
 SETUVAR _fish_abbr_gc:git\x20checkout
-SETUVAR _fish_abbr_gca:git\x20commit\x20\x2dam
+SETUVAR _fish_abbr_gca:git\x20commit\x20\x2d\x2damend
 SETUVAR _fish_abbr_gcim:git\x20commit\x20\x2dm
 SETUVAR _fish_abbr_gcm:git\x20commit\x20\x2dm
 SETUVAR _fish_abbr_gdi:git\x20diff\x20\x2d\x2dword\x2ddiff
