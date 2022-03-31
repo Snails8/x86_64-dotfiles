@@ -14,10 +14,10 @@ $ chmod +x install.sh
 $ make install
 ```
 
-window management tool
+window management tool(start, stop, restart)
 ```shell
-$ brew start services skhd
-$ brew start services yabai
+$ brew services start skhd
+$ brew services start yabai
 ```
 
 Brew の同期
