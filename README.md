@@ -2,11 +2,11 @@
 ## setup
 初回のみsudo が必要
 ```shell
-$ sudo curl -o - https://raw.githubusercontent.com/Snails8/dotfiles/main/install.sh | sh
+$ sudo curl -o - https://raw.githubusercontent.com/Snails8/x86_64-dotfiles/main/install.sh | sh
 ```
 
 ```shell
-$ curl -o - https://raw.githubusercontent.com/Snails8/dotfiles/main/install.sh | sh
+$ curl -o - https://raw.githubusercontent.com/Snails8/x86_64-dotfiles/main/install.sh | sh
 ```
 ```
 $ cd dotfiles
